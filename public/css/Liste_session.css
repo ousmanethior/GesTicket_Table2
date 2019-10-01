@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    background-color: #e0f0f0
+}
+
+#table {
+    background-color: #e0f0f0;
+    border: 4px solid white;
+    margin: 100px;
+    width: min-content;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px;
+    width: 700px;
+    height: 150px;
+    font-family: sans-serif
+}
+
+table .tr {
+    border: 3px solid
+}
+
+td,
+th {
+    border: 1px solid #068689;
+    color: #068689;
+}
+
+tr {
+    height: 17px;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #068689;
+}
