@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../public/css/style.css">
-    <title>Liste session</title>
+    <title>Liste utilisateur</title>
 </head>
 <body>
     <header>
         <ul>
-                <li><a href="formsession.html">Session</a>
+                <li><a href="formsession.php">Session</a>
                     <ul >
-                        <li><a href="formsession.html">Nouveau</a></li>
-                        <li><a href="liste_session.html">Liste </a></li>
+                        <li><a href="formsession.php">Nouveau</a></li>
+                        <li><a href="liste_session.php">Liste </a></li>
                     </ul>
                 </li>
-                <li ><a href="formutilisateur.html">Utilisateur</a>
+                <li ><a href="formutilisateur.php">Utilisateur</a>
                     <ul>
-                        <li><a href="formutilisateur.html">Nouveau</a></li>
-                        <li><a href="liste_utilisateur.html">Liste </a></li>
+                        <li><a href="formutilisateur.php">Nouveau</a></li>
+                        <li><a href="liste_utilisateur.php">Liste </a></li>
                     </ul>
                 </li>
         </ul>
     </header>
     <div class="logo">
         <img src="../public/img/sa logo.png" alt=""/>
-        <h3 style="margin-left: 490px";>Liste session</h3>
+        <h3 style="margin-left: 490px";>Liste utilisateur</h3>
     </div>
-    <section>
+      <div class="container">
         <table style="width: 1000px";>
             <tr>
                 <th>Nom</th>
@@ -55,7 +55,6 @@
                 <td></td>
             </tr>
         </table>
-    </section>
     <footer></footer>   
 </body>
 </html>
