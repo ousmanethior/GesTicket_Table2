@@ -16,7 +16,7 @@
   </div>
   <section>
     
-      <form action="">
+      <form action="../controler/connexion.php" method="post">
           <div class="input-form-session-m-b">
             <label for="">Login</label>
             <input type="text" name="email" placeholder="exemple@gmail.com">
