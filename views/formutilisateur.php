@@ -9,17 +9,22 @@
 </head>
 <body>
     <header>
+      <div class="profil">
+            <img src="../public/img/as.jpg" alt="">
+            <div class="point"></div>
+            <p>Astou Ndiaye</p> 
+      </div>
       <ul>
-          <li><a href="formsession.html">Session</a>
+          <li><a href="formsession.php">Session</a>
               <ul >
-                  <li><a href="formsession.html">Nouveau</a></li>
-                  <li><a href="liste_session.html">Liste </a></li>
+                  <li><a href="formsession.php">Nouveau</a></li>
+                  <li><a href="liste_session.php">Liste </a></li>
               </ul>
           </li>
-          <li ><a href="formutilisateur.html">Utilisateur</a>
+          <li ><a href="formutilisateur.php">Utilisateur</a>
               <ul>
-                  <li><a href="formutilisateur.html">Nouveau</a></li>
-                  <li><a href="liste_utilisateur.html">Liste </a></li>
+                  <li><a href="formutilisateur.php">Nouveau</a></li>
+                  <li><a href="liste_utilisateur.php">Liste </a></li>
               </ul>
           </li>
         </ul>

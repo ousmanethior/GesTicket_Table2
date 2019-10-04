@@ -9,6 +9,11 @@
 </head>
 <body>
     <header>
+        <div class="profil">
+            <img src="../public/img/as.jpg" alt="">
+            <div class="point"></div>
+            <p>Astou Ndiaye</p> 
+        </div>
         <ul>
             <li><a href="formsession.php">Session</a>
                 <ul >
@@ -28,7 +33,7 @@
         <img src="../public/img/sa logo.png" alt=""/>
         <h3 style="margin-left: 490px";>Liste session</h3>
     </div>
-      <div class="container">
+      <div class="container1">
             <table style="width: 1000px";>
                 <tr>
                     <th>Nom</th>
