@@ -15,8 +15,14 @@
      </div>
   </div>
   <section>
-    
-      <form action="../controler/connexion.php" method="post">
+      <form action="../controler/controlconnexion.php" method="post">
+          <div>
+              <?php 
+                  if(isset($_GET['erreur'])){
+                      echo $_GET['erreur'];
+                  }    
+              ?>
+          </div>
           <div class="input-form-session-m-b">
             <label for="">Login</label>
             <input type="text" name="email" placeholder="exemple@gmail.com">

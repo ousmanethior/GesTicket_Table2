@@ -1,10 +1,10 @@
-<?php
-     include_once('../controller/db_connect.php');
+       <?php
+           include_once('../controller/db_connect.php');
            $query = $pdo->query("SELECT * FROM `user` ");
            $users= $query->fetchAll();
           // var_dump($users) ;
 
-         ?>
+        ?>
 
 
          <table border="1">

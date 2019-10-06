@@ -34,44 +34,35 @@
         <h3 style="margin-left: 490px";>Liste session</h3>
     </div>
       <div class="container1">
-            <table style="width: 1000px";>
-                <tr>
-                    <th>Nom</th>
-                    <th>Année</th>
-                    <th>Date début</th>
-                    <th>Date fin</th>
-                    <th>Effectif</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+      <?php
+           include_once('../controler/db.php');
+           $query = $pdo->query("SELECT * FROM `session` ");
+           $sessions= $query->fetchAll();
+          // var_dump($users) ;
 
-            </table>
+        ?>
+        <table style="width: 1000px";>
+          <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Année</th>
+                <th>Date début</th>
+                <th>Date fin</th>
+                <th>Effectif</th>
+            </tr>
+          </thead> 
+          <tbody>
+             <?php foreach ($sessions as $key => $session) { ?>
+                    <tr>
+                       <td><?php echo $session['nom'];?></td>
+                       <td><?php echo $session['annee'];?></td>
+                       <td><?php echo $session['datedebut'];?></td>
+                       <td><?php echo $session['datefin'];?></td>
+                       <td><?php echo $session['effectif'];?></td>
+                    </tr>
+             <?php } ?>
+         <tbody>
+        </table>
       </div>
     <footer></footer>   
 </body>

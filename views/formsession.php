@@ -36,30 +36,37 @@
   </div>
 
      <div class="container">
-      <form action="">
+      <form action="../controler/controlsession.php" method="post">
+           <div>
+              <?php 
+                  if(isset($_GET['erreur'])){
+                      echo $_GET['erreur'];
+                  }    
+              ?>
+           </div>
            <div class="input-form-session-m-s">
                 <label for="">Nom</label>
-                <input style="margin-left: 85px;" type="text" name="email" placeholder="Nom">
+                <input style="margin-left: 85px;" type="text" name="nom" placeholder="Nom">
            </div>
 
           <div class="input-form-session-m-s">
               <label for="">Année</label>
-              <input style="margin-left: 75px;" type="text" name="Année" placeholder="Année">
+              <input style="margin-left: 75px;" type="text" name="annee" placeholder="Année">
           </div>
 
           <div class="input-form-session-m-s">
                <label for="">date de début</label>
-               <input style="margin-left: 10px"; type="date" name="date de début" placeholder="date de début">
+               <input style="margin-left: 10px"; type="text" name="datedebut" placeholder="2000-02-02">
           </div>
 
           <div class="input-form-session-m-s">
               <label for="">date de fin</label>
-              <input style="margin-left: 37px"; type="date" name="Date de Fin" placeholder="Date de Fin">
+              <input style="margin-left: 37px"; type="text" name="datefin" placeholder="2000-02-02">
           </div>
 
           <div class="input-form-session-m-s">
               <label for="">Effectif total</label>
-              <input style="margin-left: 20px";type="text" name="Effectif Total" placeholder="Effectif Total">
+              <input style="margin-left: 20px";type="text" name="effectif" placeholder="Effectif Total">
           </div>
 
           <div class="input-form-session-m-s">

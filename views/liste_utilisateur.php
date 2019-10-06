@@ -34,31 +34,32 @@
         <h3 style="margin-left: 490px";>Liste utilisateur</h3>
     </div>
       <div class="container1">
+        <?php
+           include_once('../controler/db.php');
+           $query = $pdo->query("SELECT * FROM `user` ");
+           $users= $query->fetchAll();
+          // var_dump($users) ;
+
+        ?>
         <table style="width: 1000px";>
+          <thead>
             <tr>
                 <th>Nom</th>
                 <th>Prénom</th>
                 <th>Profil</th>
                 <th>Login</th>
             </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+          </thead> 
+          <tbody>
+             <?php foreach ($users as $key => $user) { ?>
+                    <tr>
+                       <td><?php echo $user['nom'];?></td>
+                       <td><?php echo $user['prenom'];?></td>
+                       <td><?php echo $user['profil'];?></td>
+                       <td><?php echo $user['login'];?></td>
+                    </tr>
+             <?php } ?>
+         <tbody>
         </table>
      </div >
     <footer></footer>   
