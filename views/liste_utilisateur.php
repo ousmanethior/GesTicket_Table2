@@ -25,6 +25,22 @@
                     <ul>
                         <li><a href="formutilisateur.php">Nouveau</a></li>
                         <li><a href="liste_utilisateur.php">Liste </a></li>
+
+                    </ul><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+    <title>Liste utilisateur</title>
+</head>
+<body>
+             </li>
+                <li ><a href="Referentiel.php">Référentiels</a>
+                    <ul>
+                        <li><a href="lien à faire.php">Nouveau</a></li>
+                        <li><a href="liste_utilisateur.php">Liste </a></li>
                     </ul>
                 </li>
         </ul>

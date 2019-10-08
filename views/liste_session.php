@@ -27,6 +27,12 @@
                     <li><a href="liste_utilisateur.php">Liste </a></li>
                 </ul>
             </li>
+            <li ><a href="formutilisateur.php">Référentiels</a>
+                    <ul>
+                        <li><a href="ajoutref.php">Nouveau</a></li>
+                        <li><a href="lien à faire.php">Liste </a></li>
+                    </ul>
+                </li>
         </ul>
     </header>
     <div class="logo">
