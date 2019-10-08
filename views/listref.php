@@ -8,13 +8,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Liste utilisateur</title>
+    <title>Liste referentiel</title>
 </head>
 <body>
  
     <div class="logo">
         <img src="../public/img/sa logo.png" alt=""/>
-        <h3 style="margin-left: 490px";>Liste utilisateur</h3>
+        <h3 style="margin-left: 490px";>Liste des Référentiels</h3>
     </div>
       <div class="container1">
         <?php
@@ -24,7 +24,7 @@
           // var_dump($users) ;
 
         ?>
-  <table style="width: 1000px";>
+  <table style="width: 1000px;height:45px;">
           <thead>
                <tr>
                 <th>Nom des Référentiels</th>
@@ -38,7 +38,7 @@
                        <td><?php echo $user['nom referentiel'];?></td>
                        
                       <td>
-                      <button style="font-size:24px ;background-color:white; border:0px;" > <i class="material-icons">border_color</i></button>
+                      <button style="font-size:4px ;background-color:white; border:0px;" > <i class="material-icons">border_color</i></button>
                      
                       <p><button class="w3-btn w3-#068689 w3-xlarge" ><i class="material-icons">delete</i></button></p>
                       </td>

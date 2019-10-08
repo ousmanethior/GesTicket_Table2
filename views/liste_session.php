@@ -30,7 +30,7 @@
             <li ><a href="formutilisateur.php">Référentiels</a>
                     <ul>
                         <li><a href="ajoutref.php">Nouveau</a></li>
-                        <li><a href="lien à faire.php">Liste </a></li>
+                        <li><a href="formref.php">Liste </a></li>
                     </ul>
                 </li>
         </ul>
@@ -47,7 +47,7 @@
           // var_dump($users) ;
 
         ?>
-        <table style="width: 1000px";>
+        <table style="width: 1000px; height:90px;px; margin-right:95px;">
           <thead>
             <tr>
                 <th>Nom</th>

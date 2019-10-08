@@ -7,10 +7,10 @@ if(!empty($_POST['nomref'])){
    //3-Traitement => Connexion dans une BD
    include_once('./db.php');
    $req =$pdo-> exec("INSERT INTO `referentiel`  VALUES ('$nom')");
-   header("Location: ../views/liste_session.php");
+   header("Location: ../views/listref.php");
 
 }else{
-    header("Location: ../views/ajoutref.php?erreur=Login ou Mot de passe Obligatoire");  
+    header("Location: ../views/ajoutref.php?erreur=Veuillez remplir le champs");  
 }
 
 ?>

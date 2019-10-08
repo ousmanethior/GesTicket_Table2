@@ -39,7 +39,7 @@
              </li>
                 <li ><a href="Referentiel.php">Référentiels</a>
                     <ul>
-                        <li><a href="lien à faire.php">Nouveau</a></li>
+                        <li><a href="formref.php">Nouveau</a></li>
                         <li><a href="liste_utilisateur.php">Liste </a></li>
                     </ul>
                 </li>
@@ -47,7 +47,7 @@
     </header>
     <div class="logo">
         <img src="../public/img/sa logo.png" alt=""/>
-        <h3 style="margin-left: 490px";>Liste utilisateur</h3>
+        <h3 style="margin-left: 490px;height:40px;">Liste utilisateur</h3>
     </div>
       <div class="container1">
         <?php
@@ -57,7 +57,7 @@
           // var_dump($users) ;
 
         ?>
-        <table style="width: 1000px";>
+        <table style="width: 500px;margin-right:75px;">
           <thead>
             <tr>
                 <th>Nom</th>
