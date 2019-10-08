@@ -30,7 +30,7 @@
             <li ><a href="formutilisateur.php">Référentiels</a>
                     <ul>
                         <li><a href="ajoutref.php">Nouveau</a></li>
-                        <li><a href="formref.php">Liste </a></li>
+                        <li><a href="listref.php">Liste </a></li>
                     </ul>
                 </li>
         </ul>

@@ -35,12 +35,14 @@
           <tbody>
              <?php foreach ($users as $key => $user) { ?>
                     <tr>
-                       <td><?php echo $user['nom referentiel'];?></td>
+                       <td><?php echo $user['nomreferentiel'];?></td>
                        
                       <td>
                       <button style="font-size:4px ;background-color:white; border:0px;" > <i class="material-icons">border_color</i></button>
                      
-                      <p><button class="w3-btn w3-#068689 w3-xlarge" ><i class="material-icons">delete</i></button></p>
+                      <a href="..//controler/controllistref.php?del=<?php echo $user['nomreferentiel'];?>" ><i class="material-icons">delete</i></a>
+
+                     
                       </td>
                     </tr>
              <?php } ?>

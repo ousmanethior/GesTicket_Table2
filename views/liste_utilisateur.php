@@ -39,7 +39,7 @@
              </li>
                 <li ><a href="Referentiel.php">Référentiels</a>
                     <ul>
-                        <li><a href="formref.php">Nouveau</a></li>
+                        <li><a href="ajoutref.php">Nouveau</a></li>
                         <li><a href="liste_utilisateur.php">Liste </a></li>
                     </ul>
                 </li>
