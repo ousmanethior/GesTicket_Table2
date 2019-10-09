@@ -18,7 +18,7 @@
             <li><a href="formsession.php">Session</a>
                 <ul >
                     <li><a href="formsession.php">Nouveau</a></li>
-                    <li><a href="liste_session.php">Liste </a></li>
+                    <li><a href="liste_session.php">Liste</a></li>
                 </ul>
             </li>
             <li ><a href="formutilisateur.php">Utilisateur</a>
