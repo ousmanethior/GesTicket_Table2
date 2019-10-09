@@ -1,10 +1,11 @@
-<header>
+<header> 
+     <!-- profil -->
         <div class="profil">
             <img src="../public/img/as.jpg" alt="">
             <div class="point"></div>
             <p>Astou Ndiaye</p> 
         </div>
-         
+    <!-- End profil -->
         <ul>
             <li><a href="formsession.php">Session</a>
                 <ul >
