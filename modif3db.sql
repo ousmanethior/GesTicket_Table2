@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:3306
--- Généré le :  Dim 06 Octobre 2019 à 18:25
+-- Généré le :  Mer 09 Octobre 2019 à 19:28
 -- Version du serveur :  5.7.27-0ubuntu0.18.04.1
 -- Version de PHP :  7.2.19-0ubuntu0.18.04.2
 
@@ -19,6 +19,38 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `gesticketsa`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `existe`
+--
+
+CREATE TABLE `existe` (
+  `id_ref` int(11) NOT NULL,
+  `id_se` int(11) NOT NULL,
+  `Effectif` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `referentiel`
+--
+
+CREATE TABLE `referentiel` (
+  `id` int(11) NOT NULL,
+  `nomreferentiel` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `referentiel`
+--
+
+INSERT INTO `referentiel` (`id`, `nomreferentiel`) VALUES
+(16, 'Data artisan'),
+(17, 'Dev web'),
+(15, 'Référent digital');
 
 -- --------------------------------------------------------
 
@@ -40,9 +72,8 @@ CREATE TABLE `session` (
 --
 
 INSERT INTO `session` (`id`, `nom`, `annee`, `datedebut`, `datefin`, `effectif`) VALUES
-(1, 'wcwxc', 'dfddg', '2019-10-01', '2019-10-09', 45),
-(2, 'Promo', '2018', '2018-02-14', '2018-07-13', 45),
-(3, 'Promo2', '2019', '2019-04-01', '2019-11-15', 100);
+(4, 'Promo Alioune Ndiaye', '2018', '2017-11-04', '2018-05-04', 45),
+(5, 'Promo Yankhoba Ben Abdallah Mané', '2019', '2018-03-02', '2019-11-15', 100);
 
 -- --------------------------------------------------------
 
@@ -65,15 +96,28 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `nom`, `prenom`, `profil`, `login`, `motpasse`) VALUES
 (1, 'Ndiaye', 'Astou', 'Admin', 'astoundiaye@gmail.sn', 'astoundiayesa'),
-(2, 'gfgh', 'jnghjg', 'fcvfc', 'fgfgfhgfh', 'bfgfgh'),
-(3, 'Thior', 'Ousmane', 'simpleUser', 'ousmanethior@gmail.sa', 'ousmane'),
-(4, 'Sarr', 'Abdourahmane', 'simpleUser', 'rahmane@gmail.sa', 'rahmane'),
-(5, 'Ndiaye', 'Abdoulaye', 'simpleUser', 'shiisooka', 'shiisooka'),
-(6, 'wxxcwx', 'qsdqsf', 'simpleUser', 'cxwvbv', '12');
+(2, 'thior', 'ousmane', 'simpleUser', 'ousmanethior@gmail.sa', 'malamine10'),
+(3, 'thior', 'ouze', 'simpleUser', 'thior15@hotmail.com', '1234'),
+(4, 'thior', 'ouze', 'simpleUser', 'pub@prestashop.com', '12345'),
+(5, 'fsbc', 'dsfvwc', 'simpleUser', 'etgndg ', '1');
 
 --
 -- Index pour les tables exportées
 --
+
+--
+-- Index pour la table `existe`
+--
+ALTER TABLE `existe`
+  ADD PRIMARY KEY (`id_ref`,`id_se`),
+  ADD KEY `existe_session0_FK` (`id_se`);
+
+--
+-- Index pour la table `referentiel`
+--
+ALTER TABLE `referentiel`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `nomreferentiel` (`nomreferentiel`);
 
 --
 -- Index pour la table `session`
@@ -92,15 +136,31 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT pour la table `referentiel`
+--
+ALTER TABLE `referentiel`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+--
 -- AUTO_INCREMENT pour la table `session`
 --
 ALTER TABLE `session`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `existe`
+--
+ALTER TABLE `existe`
+  ADD CONSTRAINT `existe_referentiel_FK` FOREIGN KEY (`id_ref`) REFERENCES `referentiel` (`id`),
+  ADD CONSTRAINT `existe_session0_FK` FOREIGN KEY (`id_se`) REFERENCES `session` (`id`);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
