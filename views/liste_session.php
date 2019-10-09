@@ -8,6 +8,7 @@
     <title>Liste session</title>
 </head>
 <body>
+<<<<<<< HEAD
     <header>
         <div class="profil">
             <img src="../public/img/as.jpg" alt="">
@@ -39,6 +40,13 @@
         <img src="../public/img/sa logo.png" alt=""/>
         <h3 style="margin-left: 490px";>Liste session</h3>
     </div>
+=======
+  <?php include_once('../includes/menu.php'); ?>
+   <div class="logo">
+     <img src="../public/img/sa logo.png" alt=""/>
+     <h3 style="margin-left: 410px";>Liste session</h3>
+   </div>
+>>>>>>> 499cc36c2d7fa2bac4dbf169174e29da3a0a59b3
       <div class="container1">
       <?php
            include_once('../controler/db.php');
