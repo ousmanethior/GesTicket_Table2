@@ -3,12 +3,12 @@
    $dsn = 'mysql:host=localhost;dbname=gesticketsa;port=3306;charset=utf8';
    //b) Selectionner BD
    try {
-      $pdo = new PDO($dsn, 'ramaba' , 'Saliaba@rm.2019');
+      $pdo = new PDO($dsn, 'ouze' , 'malamine10');
       
       }
       catch (PDOException $exception) {
          
          //mail('fauxmail@votremail.com', 'PDOException', $exception->getMessage());
-         exit('Erreur de connexion à la base de données');    
+         exit('Erreur de connexion à la base de données');  
    }
 ?>

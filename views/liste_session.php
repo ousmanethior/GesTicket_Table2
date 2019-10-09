@@ -27,6 +27,12 @@
                     <li><a href="liste_utilisateur.php">Liste </a></li>
                 </ul>
             </li>
+            <li ><a href="formutilisateur.php">Référentiels</a>
+                    <ul>
+                        <li><a href="ajoutref.php">Nouveau</a></li>
+                        <li><a href="listref.php">Liste </a></li>
+                    </ul>
+                </li>
         </ul>
     </header>
     <div class="logo">
@@ -41,7 +47,7 @@
           // var_dump($users) ;
 
         ?>
-        <table style="width: 1000px";>
+        <table style="width: 1000px; height:90px;px; margin-right:95px;">
           <thead>
             <tr>
                 <th>Nom</th>

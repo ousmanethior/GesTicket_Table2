@@ -5,6 +5,7 @@ if(!empty($_POST['nom']) and !empty($_POST['prenom']) and !empty($_POST['profil'
     if($_POST['motdepasse'] != $_POST['confirmer']){
         header("Location: ../views/formutilisateur.php?erreur= le mot de passe est différent de la confirmation");
     }
+
     else{
         var_dump($_POST);
         $nom= $_POST['nom'];
