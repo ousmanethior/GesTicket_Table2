@@ -6,8 +6,14 @@ if(!empty($_POST['nomref'])){
     var_dump( $nom);
    //3-Traitement => Connexion dans une BD
    include_once('./db.php');
-   $req =$pdo-> exec("INSERT INTO `referentiel`  VALUES ('$nom')");
-   header("Location: ../views/listref.php");
+   $query = $pdo->query("SELECT * FROM `referentiel` ");
+   $users= $query->fetchAll();
+   $req =$pdo-> exec("INSERT INTO `referentiel` (nomreferentiel)  VALUES ('$nom')");
+   if($req){
+    header("Location: ../views/listref.php");
+   }else{
+    header("Location: ../views/ajoutref.php?erreur=Ce référentiel existe déjà"); 
+   } 
 
 }else{
     header("Location: ../views/ajoutref.php?erreur=Veuillez remplir le champs");  

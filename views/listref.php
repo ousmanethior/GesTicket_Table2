@@ -11,11 +11,11 @@
     <title>Liste referentiel</title>
 </head>
 <body>
- 
-    <div class="logo">
-        <img src="../public/img/sa logo.png" alt=""/>
-        <h3 style="margin-left: 490px";>Liste des Référentiels</h3>
-    </div>
+  <?php include_once('../includes/menu.php'); ?>
+  <div class="logo">
+     <img src="../public/img/sa logo.png" alt=""/>
+     <h3 style="margin-left: 410px";>Liste référentiel</h3>
+  </div>
       <div class="container1">
         <?php
            include_once('../controler/db.php');
@@ -38,9 +38,9 @@
                        <td><?php echo $user['nomreferentiel'];?></td>
                        
                       <td>
-                      <button style="font-size:4px ;background-color:white; border:0px;" > <i class="material-icons">border_color</i></button>
+                      <a  href="./modif.php?edit=<?php echo $user['id'];?>"> <i class="material-icons">border_color</i></a> 
                      
-                      <a href="..//controler/controllistref.php?del=<?php echo $user['nomreferentiel'];?>" ><i class="material-icons">delete</i></a>
+                      <a href="../controler/controllistref.php?del=<?php echo $user['id'];?>"  onclick="return confirm('Voulez vous vraiment supprimer?')"><i class="material-icons">delete</i></a>
 
                      
                       </td>

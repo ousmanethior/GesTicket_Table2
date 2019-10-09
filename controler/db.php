@@ -4,7 +4,6 @@
    //b) Selectionner BD
    try {
       $pdo = new PDO($dsn, 'ouze' , 'malamine10');
-      
       }
       catch (PDOException $exception) {
          

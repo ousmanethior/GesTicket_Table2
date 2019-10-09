@@ -12,7 +12,7 @@
   <div class="logo">
         <img src="../public/img/sa logo.png" alt=""/>
         <h3 style="margin-left: 490px";>Connexion</h3>
-     </div>
+  </div>
   </div>
   <section>
       <form action="../controler/controlconnexion.php" method="post">
