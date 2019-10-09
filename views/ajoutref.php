@@ -32,7 +32,7 @@
   </header>
   <div class="logo">
         <img src="../public/img/sa logo.png" alt=""/>
-        <h3 style="margin-left: 490px";>Formulaire de création de Référentiel</h3>
+        <h3 style="margin-left: 350px";>Formulaire de création de Référentiel</h3>
      </div>
   </div>
   <section>
@@ -46,7 +46,9 @@
           </div>
           <div class="input-form-session-m-b">
             <label for="">Nom Référentiel</label>
-            <input type="text" name="nomref" placeholder="">
+            <input type style="padding-bottom: 0px;height: 18px;
+
+margin: 18px;" type="text" name="nomref" placeholder="">
           </div>
           <div class="input-form-session-m-b">
             <button type="submit">Créer</button>
