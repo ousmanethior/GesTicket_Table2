@@ -11,7 +11,11 @@ if(!empty($_POST['nom']) and !empty($_POST['annee']) and !empty($_POST['datedebu
         //3-Traitement => Connexion dans une BD
         include_once('./db.php');
         $req =$pdo-> exec("INSERT INTO `session`  VALUES (NULL, '$nom', '$annee', '$datedebut', '$datefin', '$effectif')");
-        header("Location: ../views/liste_session.php");
+        if($req){
+            header("Location: ../views/liste_session.php");
+           }else{
+            header("Location: ../views/ajoutref.php?erreur=Cette année existe déjà"); 
+           } 
       
 }else{
     header("Location: ../views/formsession.php?erreur= Remplissez tous champs");  
