@@ -23,6 +23,8 @@
                     <ul>
                         <li><a href="ajoutref.php">Nouveau</a></li>
                         <li><a href="listref.php">Liste </a></li>
+                        <li><a href="session_ref.php">Session_Référentiel </a></li>
+                        <li><a href="liste_session_ref.php">Liste_Session_Référentiel </a></li>
                     </ul>
                 </li>
          </ul>

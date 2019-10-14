@@ -13,7 +13,6 @@
      <img src="../public/img/sa logo.png" alt=""/>
      <h3 style="margin-left: 410px";>Création référentiel</h3>
    </div>
-       
   <section>
       <form action="../controler/controlajoutref.php" method="post">
           <div>
@@ -25,7 +24,7 @@
           </div>
           <div class="input-form-session-m-b">
             <label for="">Nom Référentiel</label>
-            <input type="text" name="nomref" placeholder="">
+            <input type style="padding-bottom: 0px;height: 18px; margin: 18px;" type="text" name="nomref" placeholder="">
           </div>
           <div class="input-form-session-m-b">
             <button type="submit">Créer</button>
