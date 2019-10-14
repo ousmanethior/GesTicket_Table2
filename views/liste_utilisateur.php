@@ -21,7 +21,7 @@
           // var_dump($users) ;
 
         ?>
-        <table style="width: 500px;margin-right:75px;">
+        <table style="width: 1000px;height:45px;">
           <thead>
             <tr>
                 <th>Nom</th>
