@@ -13,14 +13,18 @@ if(!empty($_POST['nom']) and !empty($_POST['prenom']) and !empty($_POST['profil'
         $profil= $_POST['profil'];
         $login= $_POST['email'];
         $password=$_POST['motdepasse'];
+        $statut=$_POST['statut'];
         //3-Traitement => Connexion dans une BD
         include_once('./db.php');
-        $req =$pdo-> exec("INSERT INTO `user`  VALUES (NULL, '$nom', '$prenom', '$profil', '$login', '$password')");
+        $req =$pdo-> exec("INSERT INTO `user`  VALUES (NULL, '$nom', '$prenom', '$profil', '$login', '$password', '$statut')");
         header("Location: ../views/liste_utilisateur.php");
     }
       
 }else{
     header("Location: ../views/formutilisateur.php?erreur= Remplissez tous champs");  
 }
+
+
+
 
 ?>

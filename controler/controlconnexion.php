@@ -21,4 +21,5 @@ if(!empty($_POST['email']) and !empty($_POST['motdepasse'])){
     header("Location: ../views/connexion.php?erreur=Login ou Mot de passe Obligatoire");  
 }
 
+
 ?>
