@@ -8,7 +8,7 @@
     <title>Formulaire Utilisateur</title>
 </head>
 <body>
-<?php include_once('../includes/menu.php'); ?>
+<?php include_once('../includes/menu.php');?>
    <div class="logo">
      <img src="../public/img/sa logo.png" alt=""/>
      <h3 style="margin-left: 410px";>Création utilisateur</h3>

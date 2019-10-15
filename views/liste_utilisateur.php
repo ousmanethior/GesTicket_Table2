@@ -28,6 +28,7 @@
                 <th>Prénom</th>
                 <th>Profil</th>
                 <th>Login</th>
+                <th>Statut</th>
             </tr>
           </thead> 
           <tbody>
@@ -37,7 +38,9 @@
                        <td><?php echo $user['prenom'];?></td>
                        <td><?php echo $user['profil'];?></td>
                        <td><?php echo $user['login'];?></td>
+                       <td><?php echo $user['statut'];?></td>
                     </tr>
+
              <?php } ?>
          <tbody>
         </table>
