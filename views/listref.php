@@ -21,7 +21,8 @@
            include_once('../controler/db.php');
            $query = $pdo->query("SELECT * FROM `referentiel` ");
            $users= $query->fetchAll();
-          // var_dump($users) ;
+         
+           // var_dump($users) ;
 
         ?>
   <table style="width: 1000px;height:45px;">
