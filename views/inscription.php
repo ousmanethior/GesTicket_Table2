@@ -8,7 +8,7 @@
     <title>Formulaire inscription</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info float-right">
    
     <div class="collapse navbar-collapse col-sm-2" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
@@ -48,7 +48,7 @@
     <div class="col-4 ">
        <img src="../public/img/sa logo.png" alt=""/>
        <h3 style="margin-left: 410px";>Inscription</h3>
-       <form >
+       <form>
             <div class="form-group row">
                 <label for="inputPassword" class="col-sm-2 col-form-label">Nom</label>
                 <div class="col-sm-10">
