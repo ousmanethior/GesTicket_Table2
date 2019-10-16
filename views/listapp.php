@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>listappdev</title>
+  <title>listapp</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -22,7 +22,7 @@
         </nav>
     </header>
 <div class="container">
-  <h1 style="margin-left:200px; margin-top:100px; color:#068689;">Liste des Apprenants en Développement Web</h1>
+  <h1 style="margin-left:200px; margin-top:100px; color:#068689;">Liste des apprenants de la Sonatel Academy</h1>
           
   <table class="table table-striped" style= margin:50px;>
     <thead>
