@@ -22,9 +22,16 @@
         </nav>
     </header>
   <div class="container">
-  <img src="../public/img/sa logo.png">
+  <img src="../public/img/sa logo.png"class="rounded">
     <h1 style="margin-left:200px; margin-top:5px; color:#068689;">Liste des apprenants de la Sonatel Academy</h1>
-          
+    
+           <div>
+              <?php 
+                  if(isset($_GET['erreur'])){
+                      echo $_GET['erreur'];
+                  }    
+              ?>
+           </div>
       <table class="table table-striped" style= margin:10px;>
        <thead>
           <tr>
