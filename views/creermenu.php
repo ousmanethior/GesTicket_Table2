@@ -5,10 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <title>Connexion</title>
-</head>
+<head></head>         
 <body>
-   <?php include_once('../includes/menu.php'); ?>
+      <div>
+         <nav class="navbar navbar-inverse bg-primary">
+      
+          <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Assistante Directrice
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Creer un menu</a></li>
+                <li><a href="#">Lister les menus</a></li>
+          </ul>
+          </li>
+              <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Apprenant
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+            <li><a href="#">Choisir un menu</a></li>
+            <li><a href="#">Lister les menus</a></li>
+      </div>
+      
    <div class="logo">
      <img src="../public/img/sa logo.png" alt=""/>
      <h3 style="margin-left: 410px";>Formulaire de création de Menu</h3>
@@ -33,5 +55,15 @@
       </form>
   </section>
   <footer></footer>
+  <style type="text/css">
+ .bg-primary{
+   background-color: #068689 !important;
+ }
+ .navbar-inverse {
+    background-color: #068689 ;
+    border-color: #068689 ; 
+}
+</style>
+    
 </body>
 </html>

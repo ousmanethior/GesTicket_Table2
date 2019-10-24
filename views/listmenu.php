@@ -8,12 +8,35 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <title>Liste des Menus</title>
 </head>
 <body>
-  <?php include_once('../includes/menu.php'); ?>
-  <div class="logo">
-     <img src="../public/img/sa logo.png" alt=""/>
+<body>
+<nav class="navbar navbar-inverse bg-primary">
+<div > 
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Assistante Directrice
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Creer un menu</a></li>
+          <li><a href="#">Lister les menus</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Apprenant
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Choisir un menu</a></li>
+          <li><a href="#">Lister les menus</a></li>
+          
+  </div>
+</nav>
+<div><img src="../public/img/sa logo.png" alt=""/></div>
+
      <h3 style="margin-left: 410px";>Liste des Menus</h3>
   </div>
       <div class="container1">
@@ -25,7 +48,7 @@
            // var_dump($users) ;
 
         ?>
-  <table style="width: 1000px;height:45px;">
+  <table style="width: 1000px;height:80px;">
           <thead>
                <tr>
                 <th>Nom des Menus</th>
@@ -49,7 +72,18 @@
              <?php } ?>
          <tbody>
         </table>
+        
      </div >
+     
     <footer></footer>
+    <style type="text/css">
+ .bg-primary{
+   background-color: #068689 !important;
+ }
+ .navbar-inverse {
+    background-color: #068689 ;
+    border-color: #068689 ; 
+}
+</style>
 </body>
 </html>
