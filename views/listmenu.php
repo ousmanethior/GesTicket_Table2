@@ -14,7 +14,6 @@
     <title>Liste des Menus</title>
 </head>
 <body>
-<body>
 <nav class="navbar navbar-inverse bg-primary">
 <div > 
     <ul class="nav navbar-nav navbar-right">
