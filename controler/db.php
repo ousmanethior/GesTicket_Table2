@@ -3,7 +3,7 @@
    $dsn = 'mysql:host=localhost;dbname=gesticketsa;port=3306;charset=utf8';
    //b) Selectionner BD
    try {
-        $pdo = new PDO($dsn, 'ouze' , 'malamine10');
+        $pdo = new PDO($dsn, 'ramaba' , 'Saliaba@rm.2019');
       }
       catch (PDOException $exception) {
          mail('fauxmail@votremail.com', 'PDOException', $exception->getMessage());

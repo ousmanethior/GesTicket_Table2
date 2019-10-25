@@ -1,4 +1,26 @@
-<?php  include_once('../controler/db.php'); ?>
+<?php  
+  include_once('../controler/db.php'); 
+  if (isset($_GET['edit'])) {
+    $edi = $_GET['edit'];
+    $update = true;
+    $query = $pdo->query("SELECT * FROM apprenant WHERE apprenant.id_app = '$edi'");
+    $apps= $query->fetch();
+    //$req=$pdo->exec("UPDATE `referentiel` SET `nomreferentiel` = 'dev web' WHERE `referentiel`.`nomreferentiel` = '$edi'");
+    $nom=  $apps['nom'];
+    $prenom=  $apps['prenom'];
+    $cin= $apps['cin'];
+    $email=  $apps['email'];
+    $daten=  $apps['datenaiss'];
+    $lieu=  $apps['lieu'];
+    $ref=  $apps['ref'];
+    $session= $apps['ses'];
+    $tel= $apps['tel'];
+    $adr=  $apps['adresse'];
+    $satut=  $apps['statut'];
+    $pwd= $apps['pwd'];
+    $id_app= $apps['id_app'];
+  }
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -66,8 +88,8 @@
                   <img src="../public/img/sa logo.png" class="img-fluid mt-2" alt="">
                 </div>
                 <div class="col-8">
-                   <h2 class="text-center text-info mt-2 mb-5">Inscription</h2>
-                   <form class="bg-primary rounded " action="../controler/controlapp.php" method="post">
+                   <h2 class="text-center text-info mt-2 mb-5">Modification apprenant</h2>
+                   <form class="bg-primary rounded " action="../controler/controlmodifapp.php" method="post">
                         <div>
                             <?php 
                                 if(isset($_GET['erreur'])){
@@ -76,11 +98,12 @@
                             ?>
                         </div>
                         <div class="form-group row">
+                        <input type="hidden" name="id" placeholder="" value="<?php echo $id_app; ?>">
                             <label for="staticEmail" class="col-sm-3 col-form-label text-secondary font-weight-bold">
                              Nom
                             </label>
                             <div class="col-sm-6">
-                            <input type="text" class="form-control form-control-sm" name="nom" placeholder="THIOR">
+                            <input type="text" class="form-control form-control-sm" name="nom" value="<?php echo $nom; ?>">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -88,7 +111,7 @@
                              Prénom
                             </label>
                             <div class="col-sm-6">
-                            <input type="text" class="form-control form-control-sm" name="prenom" placeholder="Ousmane">
+                            <input type="text" class="form-control form-control-sm" name="prenom" value="<?php echo $prenom;?>">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -96,7 +119,7 @@
                              Date 
                             </label>
                             <div class="col-sm-6">
-                            <input type="date" class="form-control form-control-sm" name="daten" placeholder="THIOR">
+                            <input type="date" class="form-control form-control-sm" name="daten" value="<?php echo $daten;?>">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -104,7 +127,7 @@
                              Lieu 
                             </label>
                             <div class="col-sm-6">
-                            <input type="text" class="form-control form-control-sm" name="lieu" placeholder="Dakar">
+                            <input type="text" class="form-control form-control-sm" name="lieu" value="<?php echo $lieu;?>">
                             </div>
                         </div>
 
@@ -113,7 +136,7 @@
                                 CIN/Passeport
                             </label>
                             <div class="col-sm-6">
-                            <input type="text" class="form-control form-control-sm" name="cin" placeholder="00edhjh45">
+                            <input type="text" class="form-control form-control-sm" name="cin" value="<?php echo $cin;?>">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -121,7 +144,7 @@
                                 Email
                             </label>
                             <div class="col-sm-6">
-                            <input type="email" class="form-control form-control-sm" name="email" placeholder="exemple@gmail">
+                            <input type="email" class="form-control form-control-sm" name="email" value="<?php echo $email;?>">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -129,7 +152,7 @@
                                 Téléphone
                             </label>
                             <div class="col-sm-6">
-                            <input type="text" class="form-control form-control-sm" name="tel" placeholder="77 777 77">
+                            <input type="text" class="form-control form-control-sm" name="tel" value="<?php echo $tel;?>">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -137,7 +160,7 @@
                                 Adresse
                             </label>
                             <div class="col-sm-6">
-                                <textarea class="form-control form-control-sm" name="adresse"></textarea>
+                                <textarea class="form-control form-control-sm" name="adresse" value="<?php echo $adr;?>"></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -149,7 +172,7 @@
                                 Référentiel
                             </label>
                             <div class="col-sm-6">
-                                <select class="form-control form-control-sm" name="ref">
+                                <select class="form-control form-control-sm" name="ref" required>
                                    <option value="">  </option>
                                     <?php foreach ($refs as $key => $ref) { ?>
                                     <option value="<?php echo $ref['id'];?>"><?php echo $ref['nomreferentiel'];?></option>
@@ -166,20 +189,32 @@
                                 Session
                             </label>
                             <div class="col-sm-6">
-                                <select class="form-control form-control-sm" name="session">
-                                   <option value="">  </option>
+                                <select class="form-control form-control-sm" name="session" required>
+                                   <option value="<?php echo $session['id'];?>"></option>
                                    <?php foreach ($sessions as $key => $session) { ?>
-                                   <option value="<?php echo $session['id'];?>"><?php echo $session['annee']."     ".$session['nom'];?></option>
+                                   <option value="<?php echo $session['id'];?>"><?php echo $session['annee']."     ".$session['nom_ses'];?></option>
                                    <?php } ?>
                                 </select>
-                            </div>
+                            </div> 
                         </div>
+                        <div class="form-group row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label text-secondary font-weight-bold">
+                                Statut
+                            </label>
+                            <div class="col-sm-6">
+                                <select class="form-control form-control-sm" name="statut" required>
+                                <option value=""></option>
+                                <option value="ab">Abandonné</option>
+                                <option value="co">Continu</option>
+                                </select>
+                            </div>
+                        </div> 
                         <div class="form-group row">
                             <label for="inputPassword" class="col-sm-3 col-form-label text-secondary font-weight-bold">
                                 Mot de passe
                             </label>
                             <div class="col-sm-6">
-                            <input type="password" class="form-control form-control-sm" name="pwd">
+                            <input type="password" class="form-control form-control-sm" name="pwd" value="<?php echo $pwd;?>">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -193,8 +228,8 @@
                         <div class="form-group row">
                             <div class="col-3"></div>
                             <div class="col-8 ml-50">
-                                <button type="reset" class="btn btn-primary ">Annuler</button>
-                                <button type="submit" class="btn btn-primary">Inscrire</button>
+                                <a href=""><button type="reset" class="btn btn-primary ">Annuler</button></a>
+                                <button type="submit" class="btn btn-primary">Modifier</button>
                             </div>
                             <div class="col"></div>
                         </div>
