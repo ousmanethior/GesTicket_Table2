@@ -10,6 +10,7 @@
         $pdo = new PDO($dsn, 'ramaba' , 'Saliaba@rm.2019');
 =======
         $pdo = new PDO($dsn, 'papy' , 'King_sa2;
+>>>>>>> ad45686af1f2af659625567504e7d29951452403
 >>>>>>> 5a39a62ca192482f9a2b61cd5a6aafc02ce3e920
       }
       catch (PDOException $exception) {
