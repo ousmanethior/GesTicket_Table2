@@ -24,7 +24,6 @@
         `cin` = '$cin', `email` = '$email', 
         `datenaiss` = '$daten', `lieu` = '$lieu', `ref` = '$ref', 
         `ses` = '$session',`tel` = '$tel', `statut` = '$statut', `adresse` = '$adr', `pwd` = '$pwd' WHERE `apprenant`.`id_app` = $idp;");
-         var_dump($req); die();
          $_SESSION['message'] = "Address deleted!"; 
          header("Location: ../views/listapp.php");
     }

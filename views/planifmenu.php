@@ -1,3 +1,4 @@
+<?php  include_once('../controler/db.php'); ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -64,75 +65,133 @@
           </div>
         <!-- Table--> 
              <div class="row ">
-                 <div class="row  w-100 m-0">
+                 <div class="row  w-100 ">
                    <div class="col-3">
                       <img src="../public/img/sa logo.png" class="img-fluid mt-2" alt="">
                     </div>
                     <div class="col ">
-
-                      <h2 class="text-center text-info mt-2">Liste apprenant</h2>
-                      <h2 class="text-center text-info mt-2">Inscription</h2>
-
+                      <h2 class="text-center text-info mt-5 ">Planning menu</h2>
                     </div>
                  </div>
                  <div class="row  w-100 m-0">
-                 <div class="col ml-3">
-                   <?php
-                    include_once('../controler/db.php');
-                    $query = $pdo->query("SELECT * 
-                    FROM `referentiel`, `session`, `apprenant` 
-                    WHERE `apprenant`.`ref`=`referentiel`.`id` AND 
-                    `apprenant`.`ses`=`session`.`id` 
-                    ");
-                    $users= $query->fetchAll();
-                    // var_dump($users) ;
+                   <div class="col ml-3">
+                   
+                   <form class=" rounded mt-1" action="../controler/controlplanmenu.php" method="post">
+                        <div>
+                            <?php 
+                                if(isset($_GET['erreur'])){
+                                    echo $_GET['erreur'];
+                                }    
+                            ?>
+                        </div>
+                        <?php 
+                              $query = $pdo->query("SELECT * FROM `menu` ");
+                              $menu= $query->fetchAll(); 
 
-                   ?>
-                    <button type="submit" class="btn btn-primary float-right">Imprimer</button>
-                    <table id="example" class="table table-striped table-bordered ">
-                        <thead class="bg-primary text-white">
-                                <tr>
-                                <th scope="col">Nom</th>
-                                <th scope="col">Prénom</th>
-                                <th scope="col">Date naissance</th>
-                                <th scope="col">Lieu</th>
-                                <th scope="col">CIN</th>
-                                <th scope="col">Adresse</th>
-                                <th scope="col">Téléphone</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Référentiel</th>
-                                <th scope="col">Session</th>
-                                <th scope="col">Statut</th>
-                                <th scope="col">Action</th>
-                                </tr>
-                        </thead>
-                        <tbody id="myTable">
-                            <?php foreach ($users as $key => $user) { ?>
-                                <tr>
-                                    <td><?php echo $user['nom'];?></td>
-                                    <td><?php echo $user['prenom'];?></td>
-                                    <td><?php echo $user['datenaiss'];?></td>
-                                    <td><?php echo $user['lieu'];?></td>
-                                    <td><?php echo $user['cin'];?></td>
-                                    <td><?php echo $user['adresse'];?></td>
-                                    <td><?php echo $user['tel'];?></td>
-                                    <td><?php echo $user['email'];?></td>
-                                    <td><?php echo $user['nomreferentiel'];?></td>
-                                    <td><?php echo $user['annee']."     ".$user['nom_ses'];?></td>
-                                    <td><?php echo $user['statut'];?></td>
-                                    <td> 
-                                    <a  href="./modifapp.php?edit=<?php echo $user['id_app'];?>"> <i class="material-icons">Editer</i></a> 
-                                    </td>
-                                </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
+                              $query = $pdo->query("SELECT * FROM `dessert` ");
+                              $dessert= $query->fetchAll(); 
+                          ?>  
+                        
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-3 col-form-label text-secondary font-weight-bold">
+                             
+                            </label>
+                            <div class="col-sm-6">
+                            <input type="date" class="form-control form-control-sm" name="daten" Required>
+                            </div>
+                        </div>
+                        <div class="form-group row"> 
+                            <label for="inputPassword" class="col-sm-3 col-form-label text-secondary font-weight-bold">
+                                
+                            </label>
+                            <div class="col-sm-6">
+                                <select class="form-control " name="menu1"  Required>
+                                   <option value="">Choisir menu1</option>
+                                   <?php foreach ($menu as $key => $m) { ?>
+                                   <option value="<?php echo $m['id_menu'];?>"><?php echo $m['nom_menu'];?></option>
+                                   <?php } ?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row"> 
+                            <label for="inputPassword" class="col-sm-3 col-form-label text-secondary font-weight-bold">
+                                
+                            </label>
+                            <div class="col-sm-6">
+                                <select class="form-control " name="menu2"  Required>
+                                   <option value="">Choisir menu2</option>
+                                   <?php foreach ($menu as $key => $m) { ?>
+                                   <option value="<?php echo $m['id_menu'];?>"><?php echo $m['nom_menu'];?></option>
+                                   <?php } ?>
+                                </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group row"> 
+                            <label for="inputPassword" class="col-sm-3 col-form-label text-secondary font-weight-bold">
+                                
+                            </label>
+                            <div class="col-sm-6">
+                                <select class="form-control " name="menu3"  Required>
+                                   <option value="">Choisir menu3</option>
+                                   <?php foreach ($menu as $key => $m) { ?>
+                                   <option value="<?php echo $m['id_menu'];?>"><?php echo $m['nom_menu'];?></option>
+                                   <?php } ?>
+                                </select>
+                            </div>
+                          </div>
+                       
+                          <div class="form-group row"> 
+                            <label for="inputPassword" class="col-sm-3 col-form-label text-secondary font-weight-bold">
+                                
+                            </label>
+                            <div class="col-sm-6">
+                                <select class="form-control " name="menu4"  Required>
+                                   <option value="">Choisir fast-food1</option>
+                                   <?php foreach ($menu as $key => $m) { ?>
+                                   <option value="<?php echo $m['id_menu'];?>"><?php echo $m['nom_menu'];?></option>
+                                   <?php } ?>
+                                </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group row"> 
+                            <label for="inputPassword" class="col-sm-3 col-form-label text-secondary font-weight-bold">
+                                
+                            </label>
+                            <div class="col-sm-6">
+                                <select class="form-control " name="menu5"  Required>
+                                   <option value="">Choisir fast-food2</option>
+                                   <?php foreach ($menu as $key => $m) { ?>
+                                   <option value="<?php echo $m['id_menu'];?>"><?php echo $m['nom_menu'];?></option>
+                                   <?php } ?>
+                                </select>
+                            </div>
+                          </div>
+                          <div class="form-group row"> 
+                            <label for="inputPassword" class="col-sm-3 col-form-label text-secondary font-weight-bold">
+                                
+                            </label>
+                            <div class="col-sm-6">
+                            <select class="form-control " name="menu6"  Required>
+                                   <option value="">dessert</option>
+                                   <?php foreach ($dessert as $key => $d) { ?>
+                                   <option value="<?php echo $d['id_dess'];?>"><?php echo $d['nom_dess'];?></option>
+                                   <?php } ?>
+                               </select>
+                            </div>
+                          </div>
+                          <div class="row justify-content-center">
+                            <button class="btn btn-primary mb-2 mt-2" type='submit' name="valider">Enregistrer</button>
+                          </div>
+                    </form>
                    </div>
                  </div>
              </div>
         <!-- Footer -->
           <div class="row bg-primary  row-footer">
-             csdcs
+             csdcs<?php  include_once('../controler/db.php'); ?>
           </div>
       </div>
 
@@ -174,14 +233,7 @@
         background-color: #fff;
         border-color: #e0f0f0;
     } 
-    .col-form-label {
-        padding-top: 10px;
-        padding-left: 80px;
-    }
-    .form-control-sm {
-        margin-top: 9px;
-        margin-left: 100px;
-    }
+    
     .rounded {
         border-radius: 50px !important;
     }
@@ -191,7 +243,8 @@
         width: 200px;
     }
     .row-footer {
-        height:80%;
+        height: 30px;
+        margin-top: 18px;
     }
     .table td, .table th {
     width: 5px !important;

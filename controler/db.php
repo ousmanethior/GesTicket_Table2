@@ -4,14 +4,11 @@
    //b) Selectionner BD
    try {
 <<<<<<< HEAD
-        $pdo = new PDO($dsn, 'papy' , 'King_sa2');
+        $pdo = new PDO($dsn, 'groupe2' , 'Groupe2@');
+
 =======
-<<<<<<< HEAD
         $pdo = new PDO($dsn, 'ramaba' , 'Saliaba@rm.2019');
-=======
-        $pdo = new PDO($dsn, 'papy' , 'King_sa2;
->>>>>>> ad45686af1f2af659625567504e7d29951452403
->>>>>>> 5a39a62ca192482f9a2b61cd5a6aafc02ce3e920
+>>>>>>> 80ef429bcc9d4a0cecc04a0d9abbc4cbf4109551
       }
       catch (PDOException $exception) {
      

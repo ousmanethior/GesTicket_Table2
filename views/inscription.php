@@ -1,11 +1,7 @@
 <?php  include_once('../controler/db.php'); ?>
 <!doctype html>
 <html lang="en">
-<<<<<<< HEAD
-<head>
-=======
   <head>
->>>>>>> ad45686af1f2af659625567504e7d29951452403
     <title>
     
     </title>
@@ -18,21 +14,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-     <div class="container-fluid">
+  
+     <div class="container-fluid"  style='background:url("4.jpg"); background-size:cover;'>
        <!-- menu -->
           <div class="row bg-primary">
-<<<<<<< HEAD
             <div class="col-3 text-center">
                 <img src="../public/img/as.jpg" class="tiket-img-fluid  rounded-circle" alt="">
                 <p class="text-secondary font-weight-bold">Astou Ndiaye</p>
-=======
-
-            <div class="col-3 text-center">
-                <img src="../public/img/as.jpg" class="tiket-img-fluid  rounded-circle" alt="">
-                <p class="text-secondary font-weight-bold">Astou Ndiaye</p> 
-            <div class="col-3">
-                <img src="../public/img/as.jpg" class="tiket-img-fluid  rounded-circle " alt="">
->>>>>>> ad45686af1f2af659625567504e7d29951452403
             </div>
             <div class="col">
               <nav class="navbar navbar-expand-sm navbar-dark float-right">
@@ -213,35 +201,7 @@
                         </div>
                     </form>
                 </div>
-              <div class="col"></div><form action="../controler/controlutilisateur.php" method="post"><form action="../controler/controlutilisateur.php" method="post"><form action="../controler/controlutilisateur.php" method="post"><form action="../controler/controlutilisateur.php" method="post">
-           <div>
-              <?php 
-                  if(isset($_GET['erreur'])){
-                      echo $_GET['erreur'];
-                  }    
-              ?>
-           </div>
-           <div>
-              <?php 
-                  if(isset($_GET['erreur'])){
-                      echo $_GET['erreur'];
-                  }    
-              ?>
-           </div>
-           <div>
-              <?php 
-                  if(isset($_GET['erreur'])){
-                      echo $_GET['erreur'];
-                  }    
-              ?>
-           </div>
-           <div>
-              <?php 
-                  if(isset($_GET['erreur'])){
-                      echo $_GET['erreur'];
-                  }    
-              ?>
-           </div>
+              <div class="col"></div>
           </div>
         <!-- Footer -->
           <div class="row bg-primary  row-footer">

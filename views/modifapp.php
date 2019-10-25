@@ -90,13 +90,6 @@
                 <div class="col-8">
                    <h2 class="text-center text-info mt-2 mb-5">Modification apprenant</h2>
                    <form class="bg-primary rounded " action="../controler/controlmodifapp.php" method="post">
-                        <div>
-                            <?php 
-                                if(isset($_GET['erreur'])){
-                                    echo $_GET['erreur'];
-                                }    
-                            ?>
-                        </div>
                         <div class="form-group row">
                         <input type="hidden" name="id" placeholder="" value="<?php echo $id_app; ?>">
                             <label for="staticEmail" class="col-sm-3 col-form-label text-secondary font-weight-bold">
@@ -204,8 +197,8 @@
                             <div class="col-sm-6">
                                 <select class="form-control form-control-sm" name="statut" required>
                                 <option value=""></option>
-                                <option value="ab">Abandonné</option>
-                                <option value="co">Continu</option>
+                                <option value="abandonné">Abandonné</option>
+                                <option value="continu">Continu</option>
                                 </select>
                             </div>
                         </div> 

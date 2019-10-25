@@ -1,17 +1,13 @@
 <?php 
 	
 	include_once('../controler/db.php');
-
-
     if (isset($_GET['edit'])) {
 		$edi = $_GET['edit'];
 		$update = true;
 		$query = $pdo->query("SELECT * FROM `referentiel` WHERE `referentiel`.`id` = '$edi'");
         $referentiel= $query->fetch();
         //$req=$pdo->exec("UPDATE `referentiel` SET `nomreferentiel` = 'dev web' WHERE `referentiel`.`nomreferentiel` = '$edi'");
-
 			$nomref= $referentiel['nomreferentiel'];
-		
 			$id= $referentiel['id'];
 	}
 ?>
