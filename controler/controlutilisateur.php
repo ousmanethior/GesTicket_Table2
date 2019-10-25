@@ -7,7 +7,6 @@ if(!empty($_POST['nom']) and !empty($_POST['prenom']) and !empty($_POST['profil'
     }
 
     else{
-        var_dump($_POST);
         $nom= $_POST['nom'];
         $prenom= $_POST['prenom'];
         $profil= $_POST['profil'];
