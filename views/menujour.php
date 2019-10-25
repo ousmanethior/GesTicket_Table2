@@ -39,11 +39,10 @@
 
    <div class="dropdown">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                Dropdown button
+                Veuiller choisir un jour
             </button>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Lundi</a> 
-                <br>
+                <a class="dropdown-item" href="#">Lundi</a> <br>
                 <a class="dropdown-item" href="#">Mardi</a> <br>
                 <a class="dropdown-item" href="#">Mercredi</a> <br>
                 <a class="dropdown-item" href="#">Jeudi</a> <br>

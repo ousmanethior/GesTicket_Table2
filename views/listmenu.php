@@ -49,34 +49,31 @@
            // var_dump($users) ;
 
         ?>
-       <br>
-        </div>
-        <div class="row">
-             <table style="width: 700px;">
-            <thead>
-                    <tr>
+       
+        <br>
+  <div class="row-6">
+      <table style="width: 500px; padding-left: 25px;">
+              <thead>
+                   <tr>
                       <th>Nom des Menus</th>
                       <th>Actions</th>
-               </tr>
-                  <tr>
-                     <td><?php echo $user['nommenu'];?>
-                      </td>
-                      <td>
-                      <a  href="./modif.php?edit=<?php echo $user['nommenu'];?>"> <i class="material-icons">border_color</i></a> 
-                      <a href="../controler/controllistmenu.php?del=<?php echo $user['id'];?>"  onclick="return confirm('Voulez vous vraiment supprimer?')"><i class="material-icons">delete</i></a>
-                  </td>
-               </tr>
-          </thead> 
-          <tbody>
-             <?php foreach ($users as $key => $user) { ?>
-                    <tr>
-                       
-                    </tr>
-             <?php } ?>
-         <tbody>
-        </table>
-      </div>
-       
+                      </tr>
+                   <tr>
+                    <td><?php echo $user['nommenu'];?></td>
+                       <td>
+                       <a  href="./modif.php?edit=<?php echo $user['nommenu'];?>"> <i class="material-icons">border_color</i></a> 
+                      
+                       <a href="../controler/controllistmenu.php?del=<?php echo $user['id'];?>"  onclick="return confirm('Voulez vous vraiment supprimer?')"><i class="material-icons">delete</i></a></td>
+                   </tr>
+             </thead> 
+              <tbody>
+                   <?php foreach ($users as $key => $user) { ?>
+                      <tr>
+                      </tr>
+                   <?php } ?>
+              <tbody>
+          </table>
+        </div>
         
      </div >
      
