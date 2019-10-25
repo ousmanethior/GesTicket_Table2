@@ -33,12 +33,12 @@
       </div>
       <div class="logo">
      <img src="../public/img/sa logo.png" alt=""/>
-     <h2 style="margin-left: 410px";>Formulaire d'affichage de Menu du jour</h2>
+     <h2 style="margin-left: 410px;">Formulaire d'affichage de Menu du jour</h2>
    </div> 
    <section>
 
    <div class="dropdown">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            <button type="button" class="btn btn-primary bg-primary dropdown-toggle" data-toggle="dropdown">
                 Veuiller choisir un jour
             </button>
             <div class="dropdown-menu">
