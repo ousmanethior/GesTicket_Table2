@@ -3,7 +3,14 @@
    $dsn = 'mysql:host=localhost;dbname=gesticketsa;port=3306;charset=utf8';
    //b) Selectionner BD
    try {
+<<<<<<< HEAD
         $pdo = new PDO($dsn, 'papy' , 'King_sa2');
+=======
+<<<<<<< HEAD
+        $pdo = new PDO($dsn, 'ramaba' , 'Saliaba@rm.2019');
+=======
+        $pdo = new PDO($dsn, 'papy' , 'King_sa2;
+>>>>>>> 5a39a62ca192482f9a2b61cd5a6aafc02ce3e920
       }
       catch (PDOException $exception) {
      

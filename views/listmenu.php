@@ -14,7 +14,7 @@
     <title>Liste des Menus</title>
 </head>
 <body>
-<nav class="navbar navbar-inverse bg-primary">
+<nav class="navbar bg-primary">
 <div > 
     <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">
@@ -76,12 +76,10 @@
      
     <footer></footer>
     <style type="text/css">
- .bg-primary{
-   background-color: #068689 !important;
- }
- .navbar-inverse {
-    background-color: #068689 ;
-    border-color: #068689 ; 
+
+ .bg-primary {
+    color: #fff;
+    background-color: #068689 !important;
 }
 </style>
 </body>
