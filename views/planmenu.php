@@ -42,7 +42,10 @@
 
             <img src="../public/img/sa logo.png" alt=""/>
             <h3 style="margin-left: 500px";>Liste des Menus planifiés</h3>
-
+            <br>
+            <br>
+            <br>
+            <br>
             <table style="table width:50px border:2px;">
       <thead>
           <tr>

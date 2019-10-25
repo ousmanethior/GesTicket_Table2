@@ -29,33 +29,31 @@
               <ul class="dropdown-menu">
             <li><a href="#">Choisir un menu</a></li>
             <li><a href="#">Lister les menus</a></li>/
-
+            
       </div>
-      
-   <div class="logo">
+      <div class="logo">
      <img src="../public/img/sa logo.png" alt=""/>
-     <h2 style="margin-left: 410px";>Formulaire de création de Menu</h2>
-   </div>
-  <section>
-      <form action="../controler/controlcreermenu.php" method="post">
-          <div>
-              <?php 
-                  if(isset($_GET['erreur'])){
-                      echo $_GET['erreur'];
-                  }    
-              ?>
-          </div>
-          <div class="input-form-session-m-b">
-            <label for="">Nom du menu</label>
-            <input type style="padding-bottom: 0px;height: 18px; margin: 18px;" type="text" name="nommenu" placeholder="">
-          </div>
-          <div class="input-form-session-m-b">
-            <button type="submit">Créer</button>
-          </div>
-         
-      </form>
-  </section>
-  <footer></footer>
+     <h2 style="margin-left: 410px";>Formulaire d'affichage de Menu du jour</h2>
+   </div> 
+   <section>
+
+   <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Dropdown button
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Lundi</a> 
+                <br>
+                <a class="dropdown-item" href="#">Mardi</a> <br>
+                <a class="dropdown-item" href="#">Mercredi</a> <br>
+                <a class="dropdown-item" href="#">Jeudi</a> <br>
+                <a class="dropdown-item" href="#">Vendredi</a>
+                
+            </div>
+</div>
+
+      </section>
+ 
   <style type="text/css">
  .bg-primary{
    background-color: #068689 !important;
@@ -65,6 +63,6 @@
     border-color: #068689 ; 
 }
 </style>
-    
+<footer></footer>
 </body>
 </html>

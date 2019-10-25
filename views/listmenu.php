@@ -14,7 +14,6 @@
     <title>Liste des Menus</title>
 </head>
 <body>
-<body>
 <nav class="navbar navbar-inverse bg-primary">
 <div > 
     <ul class="nav navbar-nav navbar-right">
@@ -37,8 +36,10 @@
 </nav>
 <div><img src="../public/img/sa logo.png" alt=""/></div>
 
-     <h3 style="margin-left: 410px";>Liste des Menus</h3>
+     <h2 style="margin-left: 400px";>Liste des Menus</h2>
+     <br>
   </div>
+  <div class="row">
       <div class="container1">
         <?php
            include_once('../controler/db.php');
@@ -48,30 +49,34 @@
            // var_dump($users) ;
 
         ?>
-  <table style="width: 1000px;height:80px;">
-          <thead>
-               <tr>
-                <th>Nom des Menus</th>
-                
-                <th>Actions</th>
-                </tr>
+       <br>
+        </div>
+        <div class="row">
+             <table style="width: 700px;">
+            <thead>
+                    <tr>
+                      <th>Nom des Menus</th>
+                      <th>Actions</th>
+               </tr>
+                  <tr>
+                     <td><?php echo $user['nommenu'];?>
+                      </td>
+                      <td>
+                      <a  href="./modif.php?edit=<?php echo $user['nommenu'];?>"> <i class="material-icons">border_color</i></a> 
+                      <a href="../controler/controllistmenu.php?del=<?php echo $user['id'];?>"  onclick="return confirm('Voulez vous vraiment supprimer?')"><i class="material-icons">delete</i></a>
+                  </td>
+               </tr>
           </thead> 
           <tbody>
              <?php foreach ($users as $key => $user) { ?>
                     <tr>
-                       <td><?php echo $user['nommenu'];?></td>
                        
-                      <td>
-                      <a  href="./modif.php?edit=<?php echo $user['nommenu'];?>"> <i class="material-icons">border_color</i></a> 
-                     
-                      <a href="../controler/controllistmenu.php?del=<?php echo $user['id'];?>"  onclick="return confirm('Voulez vous vraiment supprimer?')"><i class="material-icons">delete</i></a>
-
-                     
-                      </td>
                     </tr>
              <?php } ?>
          <tbody>
         </table>
+      </div>
+       
         
      </div >
      
