@@ -20,7 +20,7 @@
         <?php
            include_once('../controler/db.php');
            $query = $pdo->query("SELECT `referentiel`.`nomreferentiel` as nomref, 
-           `session`.`nom` as senom, `session`.`annee` as seann, `existe`.`Effectif` as ef
+           `session`.`nom_ses` as senom, `session`.`annee` as seann, `existe`.`Effectif` as ef
            FROM `referentiel`, `session`, `existe` 
            WHERE `existe`.`id_ref`=`referentiel`.`id` AND 
            `existe`.`id_se`=`session`.`id` 

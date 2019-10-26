@@ -1,11 +1,7 @@
 <?php  include_once('../controler/db.php'); ?>
 <!doctype html>
 <html lang="en">
-<<<<<<< HEAD
-<head>
-=======
   <head>
->>>>>>> ad45686af1f2af659625567504e7d29951452403
     <title>
     
     </title>
@@ -21,18 +17,9 @@
      <div class="container-fluid">
        <!-- menu -->
           <div class="row bg-primary">
-<<<<<<< HEAD
             <div class="col-3 text-center">
                 <img src="../public/img/as.jpg" class="tiket-img-fluid  rounded-circle" alt="">
                 <p class="text-secondary font-weight-bold">Astou Ndiaye</p>
-=======
-
-            <div class="col-3 text-center">
-                <img src="../public/img/as.jpg" class="tiket-img-fluid  rounded-circle" alt="">
-                <p class="text-secondary font-weight-bold">Astou Ndiaye</p> 
-            <div class="col-3">
-                <img src="../public/img/as.jpg" class="tiket-img-fluid  rounded-circle " alt="">
->>>>>>> ad45686af1f2af659625567504e7d29951452403
             </div>
             <div class="col">
               <nav class="navbar navbar-expand-sm navbar-dark float-right">

@@ -3,43 +3,10 @@
 <head>
     <title>
     
-<<<<<<< HEAD
     </title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-=======
-        <nav style="float:right" position="relative">
-            <ul class="nav navbar-nav">
-                
-                <li><a href="#">Référentiels</a></li>
-                <li><a href="#">Utilisateurs</a></li>
-                <li><a href="#">Session</a></li>
-            </ul>
-        </nav>
-    </header>
-  <div class="container">
-  <img src="../public/img/sa logo.png"class="rounded">
-    <h1 style="margin-left:200px; margin-top:5px; color:#068689;">Liste des apprenants de la Sonatel Academy</h1>
-    
-           <div>
-              <?php 
-                  if(isset($_GET['erreur'])){
-                      echo $_GET['erreur'];
-                  }    
-              ?>
-           </div>
-      <table class="table table-striped" style= margin:10px;>
-       <thead>
-          <tr>
-              <th>Prénom</th>
-              <th>Nom</th>
-              <th>Email</th>
-              <th>Référentiel</th>
-              <th>CIN/PASSEPORT</th>
-              <th>Téléphone</th>
-              <th>Matricule</th>
->>>>>>> ad45686af1f2af659625567504e7d29951452403
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
