@@ -14,7 +14,7 @@
     <title>Liste des Menus</title>
 </head>
 <body>
-<body>
+<div class="col pt-2" style='background:url("4.jpg"); background-size:cover;'>
 <nav class="navbar navbar-inverse bg-primary">
 <div > 
     <ul class="nav navbar-nav navbar-right">
@@ -37,8 +37,10 @@
 </nav>
 <div><img src="../public/img/sa logo.png" alt=""/></div>
 
-     <h3 style="margin-left: 410px";>Liste des Menus</h3>
+     <h2 style="margin-left: 410px";>Liste des Menus</h2>
+     <br>
   </div>
+  <div class="row">
       <div class="container1">
         <?php
            include_once('../controler/db.php');
@@ -48,7 +50,12 @@
            // var_dump($users) ;
 
         ?>
-  <table style="width: 1000px;height:80px;">
+        <br>
+        <br>
+        <br>
+        <br>
+
+  <table style="width: 700px;">
           <thead>
                <tr>
                 <th>Nom des Menus</th>
