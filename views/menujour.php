@@ -11,6 +11,7 @@
     <title>Connexion</title>
 <head></head>         
 <body>
+<div class="col pt-2" style='background:url("4.jpg"); background-size:cover;'>
       <div>
          <nav class="navbar navbar-inverse bg-primary">
       

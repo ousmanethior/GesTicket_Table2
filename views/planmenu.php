@@ -10,6 +10,7 @@
     <title>planmenu</title>
 </head>
 <body>
+<div class="col pt-2" style='background:url("4.jpg"); background-size:cover;'>
 <nav class="navbar navbar-inverse bg-primary">
       <div > 
           <ul class="nav navbar-nav navbar-right">

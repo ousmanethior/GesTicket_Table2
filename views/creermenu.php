@@ -33,6 +33,7 @@
       </div>
       
    <div class="logo">
+   <div class="col pt-2" style='background:url("4.jpg"); background-size:cover;'>
      <img src="../public/img/sa logo.png" alt=""/>
      <h2 style="margin-left: 410px";>Formulaire de création de Menu</h2>
    </div>
