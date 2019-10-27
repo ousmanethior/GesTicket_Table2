@@ -55,7 +55,7 @@
                     <tr>
                       <th scope="row">Lundi<input type="hidden" name="jour1" value="Lundi"></th>
                       <td><input type="date" name="" value=""></td>
-                      <option value=""></option> 
+                      <option value=""></option>
                       <?php 
                     foreach ($menus as $key => $menu) {
                     ?>

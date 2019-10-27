@@ -41,6 +41,7 @@
   <table>
   <th scope="col">Jour</th>
   <th scope="col">Choix du menu</th>
+  <th scope="col">Dessert</th>
   <tr>
   <td><select class="form-control w-10 d-inline-block" name="menu" id="">
                       <option value=""></option> 
@@ -60,27 +61,28 @@
                   
                   </select>
   <td>
-  <div class="form-check">
-  <label class="form-check-label">
-    <input type="radio" class="form-check-input" name="optradio">Thiéb
-  </label>
-</div>
-<div class="form-check">
-  <label class="form-check-label">
-    <input type="radio" class="form-check-input" name="optradio">Mbaxal
-  </label>
-</div>
-<div class="form-check">
-  <label class="form-check-label">
-    <input type="radio" class="form-check-input" name="optradio">Yassa
-  </label>
-
-</div>
+  <select class="form-control w-1" name="menu" id="">
+                      <option value=""></option> 
+                      <option value="">Mbaxal</option> 
+                      <option value="">Yassa</option> 
+                      <option value="">Mafé</option> 
+                      <option value="">Thiéb</option> 
+                      <option value=""></option> 
+                    
+                
+  </td>
+  <td>
+  <select class="form-control w-5" name="menu" id="">
+                      <option value=""></option> 
+                      <option value="">Fruit</option> 
+                      <option value="">Jus</option>
   </td>
   </tr>
   </td>
   </tr>
   </table>
+                <div class="row justify-content-center">
+                        <button class="btn btn-primary mb-2" type='submit'>Enregistrer mes choix</button>
   </div>
    
       </section>
