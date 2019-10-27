@@ -13,8 +13,8 @@
   </head>
 
   <body>
-  <div class="col pt-2" style='background:url("4.jpg"); background-size:cover;'>
-      <div class="container border border-primary w-100 h-100 mt-3">
+  <div class="col pt-0" style='background:url("4.jpg"); background-size:cover;'>
+      <div class="container border border-primary w-130 h-50 mb-5">
 
               <div>
                     <nav class="navbar navbar-inverse bg-primary">
@@ -45,7 +45,7 @@
                 <table class="table table-bordered col-12 text-center">
                   <thead>
                     <tr>
-                      <th scope="col"></th>
+                      <th scope="col">Jour</th>
                       <th scope="col">Date</th>
                       <th scope="col">Menu 1</th>
                       <th scope="col">Déssert</th>
@@ -65,7 +65,7 @@
                         }
                     ?>
                   </select></td>
-                  <td><select class="form-control w-100 d-inline-block" name="menu" id="">
+                  <td><select class="form-control w-50 d-inline-block" name="menu" id="">
                       <option value=""></option> 
                       <option value="">Thiep</option> 
                       <option value="">Yassa</option> 
@@ -80,7 +80,7 @@
                     ?>
                   
                   </select></td>
-                  <td> <select class="form-control w-100 d-inline-block" name="menu" id="">
+                  <td> <select class="form-control w-70 d-inline-block" name="menu" id="">
                       <option value=""> </option>
                       <option value="">Fruit</option>
                       <option value="">Jus</option>
@@ -88,7 +88,7 @@
                   </select></td>
                     </tr>
                     <tr>
-                      <th scope="row">Mardi <input type="hidden" name="jour2" value="Mardi"></th>
+                      <th scope="row">Mardi<input type="hidden" name="jour2" value="Mardi"></th>
                       <td><input type="date" name="" value=""></td>
                       <option value=""> </option> 
                       <?php 
