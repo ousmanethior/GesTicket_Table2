@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -37,12 +38,17 @@
 </nav>
 <div><img src="../public/img/sa logo.png" alt=""/></div>
 =======
+=======
+>>>>>>> 80ef429bcc9d4a0cecc04a0d9abbc4cbf4109551
     <title>
     
     </title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<<<<<<< HEAD
+>>>>>>> 80ef429bcc9d4a0cecc04a0d9abbc4cbf4109551
+=======
 >>>>>>> 80ef429bcc9d4a0cecc04a0d9abbc4cbf4109551
 
     <!-- Bootstrap CSS -->
@@ -145,11 +151,14 @@
 
     <style type="text/css">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
  .bg-primary {
     color: #fff;
     background-color: #068689 !important;
 =======
+=======
+>>>>>>> 80ef429bcc9d4a0cecc04a0d9abbc4cbf4109551
     .tiket-img-fluid {
         max-width: 7%;
         height: auto;
@@ -210,6 +219,9 @@
     width: 5px !important;
     height: 5px !important;
     padding:0px;
+<<<<<<< HEAD
+>>>>>>> 80ef429bcc9d4a0cecc04a0d9abbc4cbf4109551
+=======
 >>>>>>> 80ef429bcc9d4a0cecc04a0d9abbc4cbf4109551
 }
  

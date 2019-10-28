@@ -4,8 +4,12 @@
    //b) Selectionner BD
    try {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $pdo = new PDO($dsn, 'groupe2' , 'Groupe2@');
 
+=======
+        $pdo = new PDO($dsn, 'ramaba' , 'Saliaba@rm.2019');
+>>>>>>> 80ef429bcc9d4a0cecc04a0d9abbc4cbf4109551
 =======
         $pdo = new PDO($dsn, 'ramaba' , 'Saliaba@rm.2019');
 >>>>>>> 80ef429bcc9d4a0cecc04a0d9abbc4cbf4109551
