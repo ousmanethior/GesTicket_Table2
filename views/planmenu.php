@@ -69,7 +69,7 @@
                       <img src="../public/img/sa logo.png" class="img-fluid mt-2" alt="">
                     </div>
                     <div class="col ">
-                      <h2 class="text-center text-info mt-2">Liste apprenant</h2>
+                      <h2 class="text-center text-info mt-2">Liste menu planifié</h2>
                     </div>
                  </div>
                  <div class="row  w-100 m-0">
@@ -79,7 +79,7 @@
                     $query = $pdo->query("SELECT * 
                     FROM `planifier`, `menu`, `dessert` 
                     WHERE `planifier`.`menu1`=`menu`.`id_menu` AND 
-                    
+                   
                     `planifier`.`id_dess`=`dessert`.`id_dess`
                     ");
                     $users= $query->fetchAll();
@@ -105,15 +105,21 @@
                             <?php foreach ($users as $key => $user) { ?>
                                 <tr>
                                     <td><?php echo $user['date'];?></td>
-                                    <td><?php echo $user['nom_menu'];?></td>
-                                    <td><?php echo $user['nom_menu'];?></td>
+                                    <td>
+                                      <?php 
+                                        echo $user['nom_menu'];
+                                      ?>
+                                    </td>
+                                    <td><?php 
+                                        echo $user['nom_menu'];
+                                      ?></td>
                                     <td><?php echo $user['nom_menu'];?></td>
                                     <td><?php echo $user['nom_menu'];?></td>
                                     <td><?php echo $user['nom_menu'];?></td>
                                     <td><?php echo $user['nom_dess'];?></td>
                                      
                                     <td> 
-                                    <a  href="./modifapp.php?edit=<?php echo $user['id_app'];?>"> <i class="material-icons">Editer</i></a> 
+                                    <a  href="./modifplanmenu.php?edit=<?php echo $user['id_app'];?>"> <i class="material-icons">Editer</i></a> 
                                     </td>
                                 </tr>
                             <?php } ?>
