@@ -1,11 +1,7 @@
 <?php  include_once('../controler/db.php'); ?>
 <!doctype html>
 <html lang="en">
-<<<<<<< HEAD
   <head>
-=======
-<head>
->>>>>>> 90cff80386c007f52e72225116c2ac95e8e41329
     <title>
     
     </title>
@@ -18,8 +14,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-  <div class="col pt-2" style='background:url("4.jpg"); background-size:cover;'>
-     <div class="container-fluid">
+  
+     <div class="container-fluid"  style='background:url("4.jpg"); background-size:cover;'>
        <!-- menu -->
           <div class="row bg-primary">
             <div class="col-3 text-center">
@@ -205,35 +201,7 @@
                         </div>
                     </form>
                 </div>
-              <div class="col"></div><form action="../controler/controlutilisateur.php" method="post"><form action="../controler/controlutilisateur.php" method="post"><form action="../controler/controlutilisateur.php" method="post"><form action="../controler/controlutilisateur.php" method="post">
-           <div>
-              <?php 
-                  if(isset($_GET['erreur'])){
-                      echo $_GET['erreur'];
-                  }    
-              ?>
-           </div>
-           <div>
-              <?php 
-                  if(isset($_GET['erreur'])){
-                      echo $_GET['erreur'];
-                  }    
-              ?>
-           </div>
-           <div>
-              <?php 
-                  if(isset($_GET['erreur'])){
-                      echo $_GET['erreur'];
-                  }    
-              ?>
-           </div>
-           <div>
-              <?php 
-                  if(isset($_GET['erreur'])){
-                      echo $_GET['erreur'];
-                  }    
-              ?>
-           </div>
+              <div class="col"></div>
           </div>
         <!-- Footer -->
           <div class="row bg-primary  row-footer">

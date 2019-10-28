@@ -1,6 +1,19 @@
+<?php
+	include_once('../controler/db.php');
+    if (isset($_GET['edit'])) {
+		$edi = $_GET['edit'];
+		$update = true;
+		$query = $pdo->query("SELECT * FROM `menu` WHERE `menu`.`id_menu` = '$edi'");
+        $menu= $query->fetch();
+        //$req=$pdo->exec("UPDATE `referentiel` SET `nomreferentiel` = 'dev web' WHERE `referentiel`.`nomreferentiel` = '$edi'");
+			$nom_menu= $menu['nom_menu'];
+			$id= $menu['id_menu'];
+	}
+?>
+
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <title>
     
     </title>
@@ -10,13 +23,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-     <div class="container-fluid">
+  
+     <div class="container-fluid"  >
        <!-- menu -->
           <div class="row bg-primary">
             <div class="col-3 text-center">
@@ -62,44 +73,34 @@
             
             </div>
           </div>
-        <!-- Table--> 
-             <div class="row ">
-                 <div class="row  w-100 m-0">
-                   <div class="col-3">
-                      <img src="../public/img/sa logo.png" class="img-fluid mt-2" alt="">
-                    </div>
-                    <div class="col ">
-                      <h2 class="text-center text-info mt-2">Liste menu</h2>
-                    </div>
-                 </div>
-                 <div class="row  w-100 m-0">
-                 <div class="col ml-3">
-                    <?php
-                        include_once('../controler/db.php');
-                        $query = $pdo->query("SELECT * FROM `menu` ");
-                        $users= $query->fetchAll();
-                     ?>
-                    <table id="example" class="table table-striped table-bordered ">
-                        <thead class="bg-primary text-white">
-                                <tr>
-                                <th scope="col">Menu</th>
-                                <th scope="col">Action</th>
-                                </tr>
-                        </thead>
-                        <tbody id="myTable">
-                            <?php foreach ($users as $key => $user) { ?>
-                                <tr>
-                                    <td><?php echo $user['nom_menu'];?></td>
-                                    <td> 
-                                    <a  href="./modifmenu.php?edit=<?php echo $user['id_menu'];?>"> <i class="material-icons">border_color</i></a>
-                                    </td>
-                                </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
-                   </div>
-                 </div>
-             </div>
+        <!-- Formulaire--> 
+          <div class="row">
+                <div class="col">
+                  <img src="../public/img/sa logo.png" class="img-fluid mt-2" alt="">
+                </div>
+                <div class="col-8">
+                   <h2 class="text-center text-info mt-5 mb-5">Modifier menu</h2>
+                   <form class="bg-primary rounded mb-5" action="../controler/controlmodifmenu.php" method="post">
+                   <input type="hidden" name="id_menu" placeholder="" value="<?php echo $id; ?>">
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-sm-3 col-form-label text-secondary font-weight-bold">
+                             Menu 
+                            </label>
+                            <div class="col-sm-6">
+                            <input type="text" class="form-control form-control-sm" name="menu" value="<?php echo $nom_menu; ?>">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-3"></div>
+                            <div class="col-8 ml-50">
+                                <button type="submit" class="btn btn-primary">Modifier</button>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                    </form>
+                </div>
+              <div class="col"></div>
+          </div>
         <!-- Footer -->
           <div class="row bg-primary  row-footer">
              csdcs
@@ -145,15 +146,17 @@
         border-color: #e0f0f0;
     } 
     .col-form-label {
-        padding-top: 10px;
         padding-left: 80px;
+        margin-top: 80px;
     }
     .form-control-sm {
         margin-top: 9px;
-        margin-left: 100px;
+        margin-top: 80px;
     }
     .rounded {
-        border-radius: 50px !important;
+        border-radius: 10px !important;
+        height:250px;
+        
     }
     .btn {
         font-weight: 810;
@@ -161,13 +164,9 @@
         width: 200px;
     }
     .row-footer {
-        height:80%;
+        height: 30px;
+        margin-top: 110px;
     }
-    .table td, .table th {
-    width: 5px !important;
-    height: 5px !important;
-    padding:0px;
-}
  
       </style>
     <!-- Optional JavaScript -->
@@ -175,22 +174,5 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-
-<script>
-  $(document).ready(function() {
-    $('#example').DataTable( {
-        "language": {
-            "lengthMenu": "Affiche _MENU_ entrées",
-            "zeroRecords": "inexistant veuillez vérifier l'orthographe",
-            "info": "Affiche _PAGE_ de _PAGES_",
-            "infoEmpty": "Aucun enregistrement disponible",
-            "infoFiltered": "(filtré de _MAX_ total enregistrements)"
-        }
-    } );
-} );
-</script>
   </body>
 </html>
