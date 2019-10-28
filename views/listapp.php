@@ -69,7 +69,11 @@
                       <img src="../public/img/sa logo.png" class="img-fluid mt-2" alt="">
                     </div>
                     <div class="col ">
+<<<<<<< HEAD
                       <h2 class="text-center text-info mt-2">Liste apprenant</h2>
+=======
+                      <h2 class="text-center text-info mt-2">Inscription</h2>
+>>>>>>> e0fe04889fc943f4c14933b27af8c8cc814c8ea6
                     </div>
                  </div>
                  <div class="row  w-100 m-0">

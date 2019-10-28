@@ -11,6 +11,7 @@
     <title>Connexion</title>
 <head></head>         
 <body>
+
 <div class="col pt-2" style='background:url("4.jpg"); background-size:cover;'>
       <div>
          <nav class="navbar navbar-inverse bg-primary">
@@ -34,24 +35,56 @@
       </div>
       <div class="logo">
      <img src="../public/img/sa logo.png" alt=""/>
-     <h2 style="margin-left: 410px;">Formulaire d'affichage de Menu du jour</h2>
+     <h2 style="margin-left: 410px;">Formulaire pour choisir un menu</h2>
    </div> 
    <section>
-
-   <div class="dropdown">
-            <button type="button" class="btn btn-primary bg-primary dropdown-toggle" data-toggle="dropdown">
-                Veuiller choisir un jour
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Lundi</a> <br>
-                <a class="dropdown-item" href="#">Mardi</a> <br>
-                <a class="dropdown-item" href="#">Mercredi</a> <br>
-                <a class="dropdown-item" href="#">Jeudi</a> <br>
-                <a class="dropdown-item" href="#">Vendredi</a>
+  <table>
+  <th scope="col">Jour</th>
+  <th scope="col">Choix du menu</th>
+  <th scope="col">Dessert</th>
+  <tr>
+  <td><select class="form-control w-10 d-inline-block" name="menu" id="">
+                      <option value=""></option> 
+                      <option value="">Lundi</option> 
+                      <option value="">Mardi</option> 
+                      <option value="">Mercredi</option> 
+                      <option value="">Jeudi</option> 
+                      <option value="">Vendredi</option> 
+                      <?php 
+                    foreach ($menus as $key => $menu) {  
+                    ?>
+                       <option value=""><?php echo $menu['Nom'];?></option> 
+                    <?php
+                     
+                        }
+                    ?>
+                  
+                  </select>
+  <td>
+  <select class="form-control w-1" name="menu" id="">
+                      <option value=""></option> 
+                      <option value="">Mbaxal</option> 
+                      <option value="">Yassa</option> 
+                      <option value="">Mafé</option> 
+                      <option value="">Thiéb</option> 
+                      <option value=""></option> 
+                    
                 
-            </div>
-</div>
-
+  </td>
+  <td>
+  <select class="form-control w-5" name="menu" id="">
+                      <option value=""></option> 
+                      <option value="">Fruit</option> 
+                      <option value="">Jus</option>
+  </td>
+  </tr>
+  </td>
+  </tr>
+  </table>
+                <div class="row justify-content-center">
+                        <button class="btn btn-primary mb-2" type='submit'>Enregistrer mes choix</button>
+  </div>
+   
       </section>
  
   <style type="text/css">
